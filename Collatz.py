@@ -6,13 +6,6 @@
 # Glenn P. Downing
 # ---------------------------
 
-
-# ------------
-# global cache
-# ------------
-
-cache = [0] * 999999
-
 # ------------
 # collatz_read
 # ------------
@@ -55,15 +48,14 @@ def collatz_eval (i, j) :
 
     # iteration to find cycle length of range
     for pos in range(i, j+1) :
-        if cache[pos] == 0 :
-            cycle_length = collatz_cycle_length (pos)
-        else :
-            cycle_length = cache[pos]
+        cycle_length = collatz_cycle_length (pos)
         if cycle_length > tempMax :
             tempMax = cycle_length
 
+    """
     # return-value validity
     assert tempMax > 0
+    """
 
     return tempMax
 
@@ -85,30 +77,14 @@ def collatz_cycle_length (l) :
 
     # find cycle length using equation
     tempNum = l
-<<<<<<< HEAD
-    while tempNum > 1 :
-        # if cycle length not lazy cached yet
-        if cache[tempNum] == 0 :
-            # if even, divide by 2 
-            if tempNum % 2 == 0 :
-                tempNum //= 2
-                count += 1
-            # if odd, use optimzation:
-            # n + (n >> 1) + 1
-            else :
-                tempNum += (tempNum >> 1) + 1
-                count += 2
-        # if cycle length lazy cached
-        else :
-            count += cache[tempNum]
-=======
     while tempNum > 1 : 
         if tempNum % 2 == 0 :
-            tempNum /= 2
+            tempNum //= 2
+            count += 1
         else :
-            tempNum = (3 * tempNum) + 1
-        count += 1
->>>>>>> parent of b5d0e03... Optimization -->  n + (n >> 1) + 1
+            # tempNum = (3 * tempNum) + 1
+            tempNum += (tempNum >> 1) + 1
+            count += 2
 
     # post-conditions
     assert count > 0
