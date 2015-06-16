@@ -12,6 +12,10 @@
 
 import sys
 
+# ------------
+# collatz_read
+# ------------
+
 def collatz_read (s) :
     """
     read two ints
@@ -127,6 +131,7 @@ def collatz_solve (r, w) :
 
 if __name__ == "__main__" :
     collatz_solve(sys.stdin, sys.stdout)
+
 
 """
 % cat RunCollatz.in
