@@ -85,6 +85,7 @@ def collatz_cycle_length (l) :
 
     # find cycle length using equation
     tempNum = l
+<<<<<<< HEAD
     while tempNum > 1 :
         # if cycle length not lazy cached yet
         if cache[tempNum] == 0 :
@@ -100,6 +101,14 @@ def collatz_cycle_length (l) :
         # if cycle length lazy cached
         else :
             count += cache[tempNum]
+=======
+    while tempNum > 1 : 
+        if tempNum % 2 == 0 :
+            tempNum /= 2
+        else :
+            tempNum = (3 * tempNum) + 1
+        count += 1
+>>>>>>> parent of b5d0e03... Optimization -->  n + (n >> 1) + 1
 
     # post-conditions
     assert count > 0
