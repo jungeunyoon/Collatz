@@ -29,8 +29,35 @@ def collatz_eval (i, j) :
     j the end       of the range, inclusive
     return the max cycle length of the range [i, j]
     """
-    # <your code>
-    return 1
+
+    # pre-conditions & argument validity
+    assert i > 0
+    assert j > 0
+    assert i < 1000000
+    assert j < 1000000
+
+    # makes sure that beginning of range is less than end
+    # otherwise makes a switch    
+    if j < i :
+        temp = i;
+        i = j;
+        j = temp;
+
+    # holds temporary maximum cycle length
+    tempMax = 0;
+
+    # iteration to find cycle length of range
+    for pos in range(i, j+1) :
+        cycle_length = collatz_cycle_length (pos)
+        if cycle_length > tempMax :
+            tempMax = cycle_length
+
+    """
+    # return-value validity
+    assert tempMax > 0
+    """
+
+    return tempMax
 
 # ------------
 # collatz_cycle_length
@@ -38,12 +65,29 @@ def collatz_eval (i, j) :
 
 def collatz_cycle_length (l) :
     """
-    i the beginning of the range, inclusive
-    j the end       of the range, inclusive
-    return the max cycle length of the range [i, j]
+    l the integer to find cycle length of
+    return the cycle length of the l
     """
-    # <your code>
-    return 1
+
+    count = 1
+    
+    # pre-conditions
+    assert l > 0
+    assert l < 1000000
+
+    # find cycle length using equation
+    tempNum = l
+    while tempNum > 1 : 
+        if tempNum % 2 == 0 :
+            tempNum /= 2
+        else :
+            tempNum = (3 * tempNum) + 1
+        count += 1
+
+    # post-conditions
+    assert count > 0
+    
+    return count
 
 # -------------
 # collatz_print
