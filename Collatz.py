@@ -32,6 +32,19 @@ def collatz_eval (i, j) :
     # <your code>
     return 1
 
+# ------------
+# collatz_cycle_length
+# ------------
+
+def collatz_cycle_length (l) :
+    """
+    i the beginning of the range, inclusive
+    j the end       of the range, inclusive
+    return the max cycle length of the range [i, j]
+    """
+    # <your code>
+    return 1
+
 # -------------
 # collatz_print
 # -------------

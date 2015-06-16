@@ -1,9 +1,17 @@
-FFFF..F
+.FFFFF.FF......F.
+======================================================================
+FAIL: test_cycle_length_2 (__main__.TestCollatz)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "TestCollatz.py", line 116, in test_cycle_length_2
+    self.assertEqual(l, 6)
+AssertionError: 1 != 6
+
 ======================================================================
 FAIL: test_eval_1 (__main__.TestCollatz)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "TestCollatz.py", line 41, in test_eval_1
+  File "TestCollatz.py", line 59, in test_eval_1
     self.assertEqual(v, 20)
 AssertionError: 1 != 20
 
@@ -11,7 +19,7 @@ AssertionError: 1 != 20
 FAIL: test_eval_2 (__main__.TestCollatz)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "TestCollatz.py", line 45, in test_eval_2
+  File "TestCollatz.py", line 63, in test_eval_2
     self.assertEqual(v, 125)
 AssertionError: 1 != 125
 
@@ -19,7 +27,7 @@ AssertionError: 1 != 125
 FAIL: test_eval_3 (__main__.TestCollatz)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "TestCollatz.py", line 49, in test_eval_3
+  File "TestCollatz.py", line 67, in test_eval_3
     self.assertEqual(v, 89)
 AssertionError: 1 != 89
 
@@ -27,15 +35,31 @@ AssertionError: 1 != 89
 FAIL: test_eval_4 (__main__.TestCollatz)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "TestCollatz.py", line 53, in test_eval_4
+  File "TestCollatz.py", line 71, in test_eval_4
     self.assertEqual(v, 174)
 AssertionError: 1 != 174
 
 ======================================================================
-FAIL: test_solve (__main__.TestCollatz)
+FAIL: test_eval_6 (__main__.TestCollatz)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "TestCollatz.py", line 82, in test_solve
+  File "TestCollatz.py", line 79, in test_eval_6
+    self.assertEqual(v, 2)
+AssertionError: 1 != 2
+
+======================================================================
+FAIL: test_eval_7 (__main__.TestCollatz)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "TestCollatz.py", line 83, in test_eval_7
+    self.assertEqual(v, 20)
+AssertionError: 1 != 20
+
+======================================================================
+FAIL: test_solve_1 (__main__.TestCollatz)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "TestCollatz.py", line 126, in test_solve_1
     self.assertEqual(w.getvalue(), "1 10 20\n100 200 125\n201 210 89\n900 1000 174\n")
 AssertionError: '1 10 1\n100 200 1\n201 210 1\n900 1000 1\n' != '1 10 20\n100 200 125\n201 210 89\n900 1000 174\n'
 - 1 10 1
@@ -55,6 +79,6 @@ AssertionError: '1 10 1\n100 200 1\n201 210 1\n900 1000 1\n' != '1 10 20\n100 20
 
 
 ----------------------------------------------------------------------
-Ran 7 tests in 0.007s
+Ran 17 tests in 0.005s
 
-FAILED (failures=5)
+FAILED (failures=8)
