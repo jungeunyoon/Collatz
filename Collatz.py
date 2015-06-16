@@ -7,6 +7,12 @@
 # ---------------------------
 
 # ------------
+# global cache
+# ------------
+
+cache = [0] * 1000000
+
+# ------------
 # collatz_read
 # ------------
 
@@ -48,14 +54,15 @@ def collatz_eval (i, j) :
 
     # iteration to find cycle length of range
     for pos in range(i, j+1) :
-        cycle_length = collatz_cycle_length (pos)
+        if cache[pos] == 0 :
+            cycle_length = collatz_cycle_length (pos)
+        else :
+            cycle_length = cache[pos]
         if cycle_length > tempMax :
             tempMax = cycle_length
 
-    """
     # return-value validity
     assert tempMax > 0
-    """
 
     return tempMax
 
@@ -68,27 +75,38 @@ def collatz_cycle_length (l) :
     l the integer to find cycle length of
     return the cycle length of the l
     """
-
-    count = 1
     
     # pre-conditions
     assert l > 0
     assert l < 1000000
 
+    # starts off at 1 to account for the
+    # first number
+    count = 1
+
     # find cycle length using equation
     tempNum = l
-    while tempNum > 1 : 
-        if tempNum % 2 == 0 :
-            tempNum //= 2
-            count += 1
+    while tempNum > 1 :
+        # value not found in cache
+        if tempNum > 999999 or cache[tempNum] == 0 :  
+            # if even number, divide by 2 
+            if tempNum % 2 == 0 :
+                tempNum //= 2
+                count += 1
+            # if odd, use optimization (n + n >> 1) + 1
+            else :
+                # tempNum = (3 * tempNum) + 1
+                tempNum += (tempNum >> 1) + 1
+                count += 2
+        # value found in cache
         else :
-            # tempNum = (3 * tempNum) + 1
-            tempNum += (tempNum >> 1) + 1
-            count += 2
+            count = count + (cache[tempNum] - 1)
+            tempNum = 1;
 
     # post-conditions
     assert count > 0
     
+    cache[l] = count
     return count
 
 # -------------

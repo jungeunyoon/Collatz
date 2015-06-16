@@ -85,10 +85,12 @@ def collatz_cycle_length (l) :
     tempNum = l
     while tempNum > 1 : 
         if tempNum % 2 == 0 :
-            tempNum /= 2
+            tempNum //= 2
+            count += 1
         else :
-            tempNum = (3 * tempNum) + 1
-        count += 1
+            # tempNum = (3 * tempNum) + 1
+            tempNum += (tempNum >> 1) + 1
+            count += 2
 
     # post-conditions
     assert count > 0
@@ -124,14 +126,12 @@ def collatz_solve (r, w) :
         collatz_print(w, i, j, v)
 
 
-
 # ----
 # main
 # ----
 
 if __name__ == "__main__" :
     collatz_solve(sys.stdin, sys.stdout)
-
 
 """
 % cat RunCollatz.in
