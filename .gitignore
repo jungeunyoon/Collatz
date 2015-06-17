@@ -5,7 +5,5 @@
 __pycache__
 .gitignore
 *.pyc
-
 collatz-tests/
-
 .coverage
