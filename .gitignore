@@ -7,3 +7,5 @@ __pycache__
 *.pyc
 collatz-tests/
 .coverage
+
+__pycache__/Collatz.cpython-34.pyc
