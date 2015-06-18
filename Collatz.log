@@ -1,3 +1,29 @@
+commit a985dfc1de8b51ef329554dc11547edc1267e3bd
+Author: Jung Yoon <jungyoon@utexas.edu>
+Date:   Wed Jun 17 18:49:01 2015 -0500
+
+    Submitting
+
+commit 99580885979f9c4a85b292b7325f4c8a7fd77b57
+Merge: 0feff62 c5ece0f
+Author: Jung Yoon <jungyoon@utexas.edu>
+Date:   Wed Jun 17 18:40:44 2015 -0500
+
+    Merge branch 'dev'
+
+commit c5ece0f7d9295ef075019b0bb3dbd503a75497cf
+Author: Jung Yoon <jungyoon@utexas.edu>
+Date:   Wed Jun 17 18:36:02 2015 -0500
+
+    Final check
+
+commit 0feff6217471d3b9b255ed96e29ee07b8ae5d0a4
+Merge: 64ff0f1 e67277e
+Author: Jung Yoon <jungyoon@utexas.edu>
+Date:   Tue Jun 16 16:28:53 2015 -0500
+
+    Merge branch 'dev'
+
 commit e67277ec9456465423d412dbabf299b8ab10192e
 Author: Jung Yoon <jungyoon@utexas.edu>
 Date:   Tue Jun 16 16:24:05 2015 -0500
@@ -53,6 +79,13 @@ Date:   Tue Jun 16 03:39:23 2015 -0500
 
     Optimization -->  n + (n >> 1) + 1
 
+commit 64ff0f10428b7ad1e638c5666c9c4e8b24dbcc4e
+Merge: 5e786b6 f21c5d0
+Author: Jung Yoon <jungyoon@utexas.edu>
+Date:   Tue Jun 16 02:31:22 2015 -0500
+
+    Merge branch 'dev'
+
 commit f21c5d00250610f8234a6f0345fcfc6915e105ef
 Author: Jung Yoon <jungyoon@utexas.edu>
 Date:   Tue Jun 16 02:29:28 2015 -0500
@@ -105,6 +138,13 @@ Author: Jung Yoon <jungyoon@utexas.edu>
 Date:   Mon Jun 15 03:03:07 2015 -0500
 
     #16 Done: Fix the given unit tests with failures
+
+commit 5e786b6c27ca4da66f51a56f42a7583d49dcbec7
+Merge: 17ebcb9 e6ce865
+Author: Jung Yoon <jungyoon@utexas.edu>
+Date:   Mon Jun 15 00:24:17 2015 -0500
+
+    Merge branch 'dev'
 
 commit e6ce8651a065686b4c1380c15bd0c415f1e2928b
 Author: Jung Yoon <jungyoon@utexas.edu>

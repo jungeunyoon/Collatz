@@ -5,7 +5,7 @@
 __pycache__
 .gitignore
 *.pyc
-
 collatz-tests/
-
 .coverage
+
+__pycache__/Collatz.cpython-34.pyc
