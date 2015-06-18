@@ -1,3 +1,40 @@
+commit 6ca02a04f9c8e186152383f95e515663c65c6982
+Merge: 6ef201f 764c469
+Author: Jung Yoon <jungyoon@utexas.edu>
+Date:   Wed Jun 17 19:04:35 2015 -0500
+
+    Merge branch 'master' into dev
+
+commit 6ef201ffe31f0bd523e13b30fe0361fc0ed5e777
+Author: Jung Yoon <jungyoon@utexas.edu>
+Date:   Wed Jun 17 19:03:50 2015 -0500
+
+    Remove .commit
+
+commit dd0e339ef142100d01e80971e26a724a307516dd
+Author: Jung Yoon <jungyoon@utexas.edu>
+Date:   Wed Jun 17 19:03:40 2015 -0500
+
+    Remove pycache
+
+commit 764c4690ac54f0104d92e0a7a55cbb61474e6f8b
+Author: Jung Yoon <jungyoon@utexas.edu>
+Date:   Wed Jun 17 18:59:26 2015 -0500
+
+    Final - Final push
+
+commit f21bb8e576b2b98a98b6c390dbbef642ee377d51
+Author: Jung Yoon <jungyoon@utexas.edu>
+Date:   Wed Jun 17 18:52:53 2015 -0500
+
+    Remove pycache
+
+commit 00e795f770319b0f99c9a8967b82f415bb2c0f15
+Author: Jung Yoon <jungyoon@utexas.edu>
+Date:   Wed Jun 17 18:52:24 2015 -0500
+
+    Remove .commit
+
 commit a985dfc1de8b51ef329554dc11547edc1267e3bd
 Author: Jung Yoon <jungyoon@utexas.edu>
 Date:   Wed Jun 17 18:49:01 2015 -0500
